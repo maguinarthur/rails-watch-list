@@ -8,9 +8,9 @@
     <% @list.bookmarks .each do |bookmark| %>
       <div class="col-4 mt-2">
         <div class="card-movie">
-          <img src="#{bookmark.movie.poster_url}" />
+          <img src=<%= bookmark.movie.poster_url %>>
           <div class="card-movie-infos">
-            <div class="d-flex">
+            <div class="d-flex mb-1 ">
               <h2><%= bookmark.movie.title %> -</h2>
               <h2 class="card-movie-rating   ml-1"><%= bookmark.movie.rating %></h2>
               <i class="fas fa-star ml-1" style="color: rgb(255, 221, 1)"></i>
@@ -22,7 +22,7 @@
               <i class="fas fa-quote-right"></i>
               <p class="ml-2"><%= bookmark.comment %></p>
             </div>
-            <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure ?'}, class: 'btn btn-link' %>
+            <%= link_to "delete from list", bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure ?'}, class: 'btn btn-link' %>
           </div>
         </div>
       </div>
