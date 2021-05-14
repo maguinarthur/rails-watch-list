@@ -10,7 +10,7 @@
 </div>
 
   <div class="row mx-3">
-    <% @movies.each do |movie| %>
+    <% @movies.sort_by { |movie| movie.title }.each do |movie| %>
         <div class="col-4 mt-4">
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= movie.poster_url %>')"><%= movie.title %>
           </div>
