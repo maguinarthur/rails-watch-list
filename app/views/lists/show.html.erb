@@ -8,7 +8,7 @@
     <% @list.bookmarks .each do |bookmark| %>
       <div class="col-4 mt-2">
         <div class="card-movie">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <img src="#{bookmark.movie.poster_url}" />
           <div class="card-movie-infos">
             <div class="d-flex">
               <h2><%= bookmark.movie.title %> -</h2>
