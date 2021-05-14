@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h2><strong>My movie lists</strong></h2>
+    <%= link_to "Create a movie list", new_list_path, class: "btn btn-dark" %>
+  </div>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-4 mt-4">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.lexpress.fr/medias_1380/w_1000,h_563,c_fill,g_north/v1406731772/the-artist-7_706866.jpg)">
+          <%= link_to list.name, list_path(list), class: "btn btn-outline-light" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

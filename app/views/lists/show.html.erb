@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h2>List: <strong><%= @list.name %></strong></h2>
+    <%= link_to "Add a movie to list", new_list_bookmark_path(@list), class: "btn btn-dark"%>
+  </div>
+
+  <div class="row">
+    <% @list.bookmarks .each do |bookmark| %>
+      <div class="col-6 mt-2">
+        <div class="card-movie">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-movie-infos">
+            <div class="d-flex">
+              <h2><%= bookmark.movie.title %> -</h2>
+              <h2 class="card-movie-rating   ml-1"><%= bookmark.movie.rating %></h2>
+              <i class="fas fa-star ml-1"></i>
+            </div>
+            <p><%= bookmark.movie.overview %>.</p>
+          </div>
+          <div class="card-movie-comments">
+            <div class="d-flex">
+              <i class="fas fa-quote-right"></i>
+              <p class="ml-2">Recommended by John</p>
+            </div>
+            <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure ?'}, class: 'btn btn-link' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

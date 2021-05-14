@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Add a movie to list: <strong><%= @list.name %></strong></h2>
+  <%= simple_form_for [@list, @bookmark]  do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie, label_method: :title, value_method: :id %>
+    <%= f.submit class: "btn btn-success" %>
+  <% end %>
+</div>
