@@ -13,6 +13,47 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.card-category .list-link {
+    font-size: 24px;
+    color: white;
+    transition: 0.3s ease;
+    text-decoration: none;
+    &:hover {
+        color: #FFF;
+        font-size: 40px;
+      }
+}
+
+.title-link {
+  transition: 0.4s ease;
+}
+
+
+
+
+
+.card-remove-link {
+  font-size: 16px;
+  color: white;
+  border-radius: 50%;
+  // border: 1px solid white;s
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.8;
+  // transform: rotatse(45deg);
+  font-weight: lighter;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+    // position: relative;
+    // top: -70px;
+    // right: -70px;
 
 
 .card-movie {
@@ -56,7 +97,7 @@
 }
 
 .card-movie-comments {
-  padding: 16px;
+  padding: 8px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;

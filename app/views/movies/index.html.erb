@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between">
     <h2><strong>My movies</strong></h2>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Look up a movie" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
@@ -11,7 +11,7 @@
 
   <div class="row mx-3">
     <% @movies.sort_by { |movie| movie.title }.each do |movie| %>
-        <div class="col-4 mt-4">
+        <div data-aos="fade-out" class="col-4 mt-4">
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= movie.poster_url %>')"><%= movie.title %>
           </div>
         </div>

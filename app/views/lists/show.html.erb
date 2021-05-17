@@ -22,7 +22,7 @@
               <i class="fas fa-quote-right"></i>
               <p class="ml-2"><%= bookmark.comment %></p>
             </div>
-            <%= link_to "delete from list", bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure ?'}, class: 'btn btn-link' %>
+            <%= link_to "delete from list", bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure ?'}, class: 'btn btn-link', style: "padding-right: 0px"%>
           </div>
         </div>
       </div>
